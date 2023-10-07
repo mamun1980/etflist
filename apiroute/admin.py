@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import HashKey
 
-# Register your models here.
+
+@admin.register(HashKey)
+class HashKeyAdmin(admin.ModelAdmin):
+    list_display = ['name', 'hash']
